@@ -5,9 +5,17 @@
   box-sizing: border-box;
 }
 
+/* html+body full height */
+html,body{
+  height: 100%;
+}
+/* Flex layout for sticky footer  */
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -35,22 +43,25 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #333;
+  color:black;
   transition: color 0.3s ease;
 }
 
 /* Pseudo-class */
-.nav-links a:hover {
+.nav-links a:hover,.nav-link a.active {
   color: brown;
 }
 
 .nav-links a:focus-visible {
   outline: 2px solid brown;
 }
+main{ 
+  flex: 1;
+}
 
 /* Hero Section */
 .hero {
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,7 +85,6 @@ body {
   background: brown;
   color: #fff;
   border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover + transition */
@@ -82,15 +92,20 @@ body {
   background: #5c2c0a;
   transform: scale(1.05);
 }
+.link{
+  color: brown;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* Sections */
+/* Sections (About ,learning , Contact)*/
 section {
   padding: 60px 30px;
 }
 
 h2 {
-  margin-bottom: 20px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 /* Pseudo-element */
@@ -118,6 +133,19 @@ h2::after {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+.journey ul {
+  max-width: 300px;
+  margin: auto;
+}
+
+.journey li {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.cta{
+  background: #f9f9f9;
+  text-align:center;
 }
 
 /* Hover effect */
@@ -156,10 +184,12 @@ h2::after {
 
 /* Footer */
 footer {
+  margin-top: auto;
   text-align: center;
   padding: 15px;
   background: #333;
   color: #fff;
+  
 }
 
 /* Animation */
